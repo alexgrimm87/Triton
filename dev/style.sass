@@ -1,0 +1,1204 @@
+// Fonts
+//-----------------------------------------------------------------------------------
+$arial-mt: 'arialregular'
+$arial-mt-bold: 'arialbold'
+$roboto: 'robotoregular'
+$opensans: 'OpenSans', sans-serif
+
+@font-face
+    font-family: 'arialregular'
+    src: url('../fonts/arialmt-webfont.eot')
+    src: url('../fonts/arialmt-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/arialmt-webfont.woff2') format('woff2'), url('../fonts/arialmt-webfont.woff') format('woff'), url('../fonts/arialmt-webfont.ttf') format('truetype')
+    font-weight: normal
+    font-style: normal
+
+@font-face
+    font-family: 'arialbold'
+    src: url('../fonts/arial-boldmt-webfont.eot')
+    src: url('../fonts/arial-boldmt-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/arial-boldmt-webfont.woff2') format('woff2'), url('../fonts/arial-boldmt-webfont.woff') format('woff'), url('../fonts/arial-boldmt-webfont.ttf') format('truetype')
+    font-weight: normal
+    font-style: normal
+
+@font-face
+    font-family: 'robotoregular'
+    src: url('../fonts/roboto-regular-webfont.eot')
+    src: url('../fonts/roboto-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/roboto-regular-webfont.woff2') format('woff2'), url('../fonts/roboto-regular-webfont.woff') format('woff'), url('../fonts/roboto-regular-webfont.ttf') format('truetype');
+    font-weight: normal
+    font-style: normal
+
+// Elements
+//-----------------------------------------------------------------------------------
+.slick-slide
+  outline: none
+  img
+    // margin: 0 auto
+    max-width: 100%
+    height: 100%
+
+.slick-prev
+  left: 241px
+  z-index: 1
+  width: 60px
+  height: 60px
+  border: solid 1px #fff
+  @media (max-width: 1330px) 
+    left: 141px
+  &:before
+    content: "\f104"
+    font-size: 36px
+    font-family: FontAwesome
+    font-style: normal
+    font-weight: normal
+    text-decoration: inherit
+.slick-next
+  right: 252px
+  width: 60px
+  height: 60px
+  border: solid 1px #fff
+  @media (max-width: 1330px) 
+    right: 152px
+  &:before
+    content: "\f105"
+    font-size: 36px
+    font-family: FontAwesome
+    font-style: normal
+    font-weight: normal
+    text-decoration: inherit
+.slick-dots
+  bottom: 14px
+  @media (max-width: 1330px) 
+    bottom: -30px
+  li
+    margin: 0
+    &.slick-active
+      button
+        &:before
+          color: red
+    button
+      &:before
+        font-size: 11px
+        color: #fff
+        opacity: 1
+        @media (max-width: 1330px) 
+          color: #ebebeb
+
+.el-product-item
+  width: 236px
+  display: inline-block
+  border-right: solid 1px #e1e1e1
+  padding: 14px 14px
+  position: relative
+  &:last-child
+    border-right: 0
+  &:hover
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1)
+  a
+    display: block
+    img
+      display: block
+      margin: 0 auto 17px auto
+  .super-price
+    position: absolute
+    width: 105px
+    height: 32px
+    background: url('../img/super-price.svg') no-repeat
+    left: -1px
+    bottom: 116px
+    span
+      color: #e7393a
+      font: normal 13px/30px $arial-mt
+      padding-left: 13px
+      display: block
+      -webkit-transform: rotate(4deg)
+      transform: rotate(4deg)
+      cursor: pointer
+  .stock
+    position: absolute
+    width: 65px
+    height: 30px
+    background: url('../img/stock.svg') no-repeat
+    left: -1px
+    bottom: 152px
+    span
+      color: #e7393a
+      font: normal 13px/30px $arial-mt
+      padding-left: 13px
+      display: block
+      -webkit-transform: rotate(4deg)
+      transform: rotate(4deg)
+      cursor: pointer
+  .good-choice
+    position: absolute
+    width: 132px
+    height: 34px
+    background: url('../img/good-choice.svg') no-repeat
+    left: -1px
+    bottom: 117px
+    span
+      color: #f26e15
+      font: normal 13px/35px $arial-mt
+      padding-left: 15px
+      display: block
+      -webkit-transform: rotate(3deg)
+      transform: rotate(3deg)
+      cursor: pointer
+  p
+    color: #333333
+    font: normal 14px/20px $arial-mt
+    margin: 0 0 7px 0
+    @media (max-width: 480px)
+      font-size: 11px
+  .price
+    margin: 0 4px 4px 0
+    display: inline-block
+    color: #373737
+    font: normal 21px/1 $arial-mt
+    @media (max-width: 480px)
+      font-size: 14px
+  .old-price
+    color: #f25f60
+    font: normal 14px/1 $arial-mt
+    text-decoration: line-through
+    @media (max-width: 480px)
+      font-size: 9px
+  .product-reviews
+    display: block
+    color: #5eacec
+    font: normal 12.7px/25px $arial-mt
+    text-decoration: none
+    &:hover
+      opacity: .75
+    @media (max-width: 480px)
+      font-size: 8.6px
+
+.el-slide-button
+  display: inline-block
+  width: 50px
+  height: 50px
+  background: #edf1f5
+  border: solid 1px #e0e0e0
+  text-decoration: none
+  color: #c2c2c2
+  text-align: center
+  padding-top: 4px
+  opacity: .75
+  &:hover
+    opacity: 1
+  @media (max-width: 481px)
+    display: none
+  &.el-slide-prev:before
+    content: "\f104"
+    font-size: 36px
+    font-family: FontAwesome
+    font-style: normal
+    font-weight: normal
+    text-decoration: inherit
+  &.el-slide-next:before
+    content: "\f105"
+    font-size: 36px
+    font-family: FontAwesome
+    font-style: normal
+    font-weight: normal
+    text-decoration: inherit
+
+.el-sub-menu
+  float: right
+  padding: 0
+  margin: 0
+  list-style: none
+  max-width: 900px
+  padding: 34px 20px
+  @media (max-width: 1199px)
+    padding: 0
+    width: 572px
+  @media (max-width: 480px)
+    width: 100%
+  li
+    display: inline-block
+    vertical-align: middle
+    width: 143px
+    margin-bottom: 23px
+    cursor: pointer
+    @media (max-width: 1199px)
+      width: 114px
+    @media (max-width: 480px)
+      display: block
+      width: 100%
+    &:hover
+      background-color: #ffffff
+      box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2)
+    a
+      display: block
+      text-decoration: none
+
+      img
+        display: block
+        margin: 10px auto
+      span
+        display: block
+        color: #2a2a2a
+        font: normal 14px/1 $arial-mt
+        text-align: center
+        padding-bottom: 10px
+
+.tabs
+  padding: 0
+  margin: 0
+  list-style: none
+  font-size: 0
+  li
+    display: inline-block
+    &.active
+      background: #edf1f5
+      border: solid 1px #e1e1e1
+    a
+      display: block
+      text-decoration: none
+      color: #333333
+      font: normal 21px/1 $arial-mt
+      padding: 13px 0
+      min-width: 170px
+      text-align: center
+      &:hover
+        opacity: .75
+      @media (max-width: 480px)
+        font-size: 16px
+        min-width: 90px
+
+.el-articles
+  .reviews-item
+    display: inline-block
+    vertical-align: top
+    width: 270px
+    margin-right: 28px
+    @media (max-width: 480px)
+      max-width: 270px
+    a
+      display: inline-block
+      margin-bottom: 3px
+      text-decoration: none
+      &:hover
+        opacity: .75
+      img
+        display: block
+    .date
+      color: #a0a0a0
+      font: bold 14px/1.43 $arial-mt
+    .video-review
+      float: right
+      color: #728086
+      font: normal 13px/1.54 $arial-mt
+      position: relative
+      padding-right: 21px
+      &:after
+        content: "\f144"
+        position: absolute
+        font-family: FontAwesome
+        font-style: normal
+        font-weight: normal
+        text-decoration: inherit
+        color: #cfd4d9
+        font-size: 18px
+        left: 43px
+        top: -3px
+    p
+      margin: 3px 0 0 0
+      color: #373737
+      font: bold 15px/1.4 $arial-mt
+
+// Style Star Rating
+//-----------------------------------------------------------------------------------
+fieldset, label
+  margin: 0
+  padding: 0
+  font-size: 12px
+fieldset
+  margin-right: 8px //test
+  @media (max-width: 480px)
+    margin-right: 0
+.rating
+  border: none
+  float: left
+.rating > input
+  display: none
+.rating > label:before 
+  margin: 5px 1px
+  font-size: 1.25em
+  font-family: FontAwesome
+  display: inline-block
+  content: "\f005"
+.rating > .half:before
+  content: "\f089"
+  position: absolute
+.rating > label
+  color: #e4eaf1
+  float: right
+
+.rating > input:checked ~ label, .rating:not(:checked) > label:hover, .rating:not(:checked) > label:hover ~ label
+  color: #ffdb99
+.rating > input:checked + label:hover, .rating > input:checked ~ label:hover, .rating > label:hover ~ input:checked ~ label, .rating > input:checked ~ label:hover ~ label
+  color: #ffdb99
+
+// Page
+//-----------------------------------------------------------------------------------
+body
+  font-family: $arial-mt
+
+.container
+  padding-right: 15px
+  padding-left: 15px
+  margin-right: auto
+  margin-left: auto 
+  box-sizing: content-box
+  @media (min-width:768px)
+    width: 750px
+  @media (min-width:992px)
+    width: 970px
+  @media (min-width:1200px)
+    width: 1170px
+
+.clearfix:after
+  content: ""
+  display: table
+  clear: both
+
+* 
+  box-sizing: border-box
+
+img
+  border: none
+  vertical-align: top
+  max-width: 100%
+  height: auto
+
+.header-top-wrap
+  border-bottom: solid 1px #e1e1e1
+  .header-top
+    @media (max-width: 1199px)
+      display: none
+      position: fixed;
+      height: 100%
+      background: #333
+      z-index: 3
+      left: 0
+      padding-left: 30px
+      @media (max-width: 480px)
+        padding: 0 15px
+    .header-info
+      float: left
+      color: #8f8f8f
+      font: normal 14px/1 $roboto
+      padding-top: 8px
+      margin-right: 43px
+      @media (max-width: 1199px)
+        float: none
+        margin-bottom: 25px
+      a
+        text-decoration: none
+        color: #8f8f8f
+        letter-spacing: 0.4px
+        margin-right: 11px
+        @media (max-width: 1199px)
+          color: #fff
+        @media (max-width: 480px)
+          display: block
+          margin: 0 0 10px 0
+          text-align: center
+        &:hover
+          opacity: .75
+        &:before
+          content: ' '
+          display: inline-block
+          vertical-align: bottom
+          margin-right: 2px
+          height: 16px
+          width: 16px
+          background: url('../img/star-icon.png') no-repeat
+        &:after
+          content: ''
+          display: inline-block
+          margin-left: 2px
+          border: 4px solid transparent
+          border-top: 3px solid #8f8f8f
+      span
+        @media (max-width: 1199px)
+          color: #fff
+        @media (max-width: 480px)
+          display: block
+          margin-right: 0
+          text-align: center
+        &:before
+          content: ' '
+          display: inline-block
+          vertical-align: bottom
+          padding-right: 4px
+          height: 14px
+          width: 14px
+          background: url('../img/time-icon.png') no-repeat
+    .header-links
+      float: left
+      padding-top: 5px
+      @media (max-width: 1199px)
+        float: none
+        margin-bottom: 25px
+      ul
+        padding: 0
+        margin: 0
+        list-style: none
+        li
+          display: inline-block
+          vertical-align: middle
+          padding-right: 14px
+          &:last-child
+            padding-right: 0
+          @media (max-width: 1199px)
+            display: block
+            padding-right: 0
+            margin-bottom: 30px
+          a
+            text-decoration: none
+            color: #333333
+            font: normal 13px/1 $arial-mt
+            &:hover
+              opacity: .75
+            @media (max-width: 1199px)
+              color: #fff
+              font-size: 14px
+    .header-admin
+      float: right
+      @media (max-width: 1199px)
+        float: none
+      ul
+        padding: 0
+        margin: 0
+        list-style: none
+        font-size: 0
+        li
+          display: inline-block
+          vertical-align: middle
+          &.enter
+            border-left: solid 1px #e1e1e1
+            border-right: solid 1px #e1e1e1
+          &.reg
+            border-right: solid 1px #e1e1e1
+          @media (max-width: 1199px)
+            border: solid 1px #ffffff
+          a
+            display: block
+            text-decoration: none
+            color: #333333
+            font: normal 14px/1 $arial-mt
+            padding: 11px 37px 13px 37px
+            &:hover
+              background: #dc2a2b
+              color: white
+            @media (max-width: 1199px)
+              color: #fff
+            @media (max-width: 480px)
+              padding: 11px 25px 13px 25px
+  .mob-header-top
+    display: none
+    position: absolute
+    top: 4%
+    left: 4%
+    color: #333
+    @media (max-width: 1199px)
+      display: block
+  .header-top-overlay
+    display: none
+    background: black
+    opacity: 0.5
+    height: 100%
+    width: 100%
+    z-index: 2
+    position: fixed
+    top: 0
+    &.active
+      display: block
+
+
+.header-middle
+  padding-bottom: 26px
+  .header-logo
+    float: left
+    margin: 22px 79px 0 35px
+    @media (max-width: 1199px)
+      float: none
+      text-align: center
+    a
+      display: inline-block
+      &:hover
+        opacity: .75
+  .header-search
+    float: left
+    margin: 32px 53px 0 0
+    @media (max-width: 1199px)
+      float: none
+      text-align: center
+      margin: 32px 0
+    @media (max-width: 653px)
+      display: none
+    form
+      font-size: 0
+      .search-border
+        background: #ebebeb
+        border: solid 1px #d3d3d3
+        display: inline-block
+        vertical-align: top
+        .dropdown-field
+          display: inline-block
+          position: relative
+          @media (max-width: 653px)
+            display: none
+          .search-dropdown
+            height: 38px
+            width: 132px
+            font: normal 13px/1 $roboto
+            color: #373737
+            padding-left: 44px
+            outline: none
+            background: #ebebeb url('../img/arrow-search-icon.png') no-repeat
+            background-position: 84px center
+            border: 0
+            border-right: solid 1px #d3d3d3
+            -webkit-appearance: none
+            -moz-appearance: none
+            appearance: none
+            &::-ms-expand
+              display: none
+            &:hover
+              opacity: .75
+        .form-field 
+          display: inline-block
+          vertical-align: top
+          input
+            outline: none
+            height: 38px
+            width: 352px
+            color: #333333
+            background: #ebebeb url("../img/glass-icon.png") no-repeat
+            background-position: 15px center
+            border: none
+            font: normal 14px/1 $arial-mt
+            padding-left: 31px
+            &::-webkit-input-placeholder
+              color: #333333
+            &::-moz-placeholder
+              color: #333333
+            &:-moz-placeholder  
+              color: #333333        
+            &:-ms-input-placeholder
+              color: #333333
+            @media (max-width: 521px)
+              width: 100%
+      button
+        height: 40px
+        width: 85px
+        background: #dc2a2b
+        outline: none
+        border: none
+        font: normal 14px/1 $arial-mt
+        color: #fff
+        &:hover
+          opacity: .75
+  .mob-search
+    display: none
+    position: absolute
+    top: 4%
+    right: 4%
+    color: #333
+    @media (max-width: 653px)
+      display: block
+  .header-middle-btn
+    @media (max-width: 1199px)
+      margin: 0 auto
+      width: 231px
+    .header-compare
+      float: left
+      margin: 28px 34px 0 0
+      position: relative
+      .compare-number
+        font: normal 12px/1 $opensans
+        color: #fff
+        position: absolute
+        width: 7px
+        height: 12px
+        right: 3px
+        bottom: 41px
+        z-index: 1
+        cursor: default
+        width: 20px
+        height: 20px
+        background: #dc2a2b
+        border-radius: 50%
+        padding: 4px 0 0 6px
+      img
+        display: block
+        margin: 0 auto
+        margin-bottom: 4px
+      a
+        display: inline-block
+        text-decoration: none
+        border-bottom: 1px dashed #4a4a4a
+        font: normal 14px/1 $roboto
+        color: #4a4a4a
+        &:hover
+          opacity: .75
+    .header-basket
+      float: left
+      margin-top: 28px
+      position: relative
+      .basket-number
+        font: normal 12px/1 $opensans
+        color: #fff
+        position: absolute
+        width: 7px
+        height: 12px
+        right: 37px
+        bottom: 41px
+        z-index: 1
+        cursor: default
+        width: 20px
+        height: 20px
+        background: #dc2a2b
+        border-radius: 50%
+        padding: 4px 0 0 6px
+      img
+        display: block
+        margin: 0 auto
+        margin-bottom: 2px
+      a
+        display: inline-block
+        text-decoration: none
+        border-bottom: 1px dashed #4a4a4a
+        font: normal 14px/1 $arial-mt
+        color: #333333
+        &:hover
+          opacity: .75
+
+
+.header-bottom
+  background: #515151
+  @media (max-width: 1199px)
+    background: #fff
+  .navigation
+    .mob-menu
+      display: none
+      text-decoration: none
+      @media (max-width: 1199px) 
+        display: block
+        width: 68px
+        margin: 0 auto 25px auto
+      span
+        color: #383636
+        font: bold 11px/1 $arial-mt
+    .main-menu
+      padding: 0
+      margin: 0
+      list-style: none
+      font-size: 0
+      position: relative
+      @media (max-width: 1199px)
+        display: none
+      .link-item
+        display: inline-block
+        vertical-align: top
+        padding: 24px 20px
+        @media (max-width: 1199px)
+          display: block
+          border-bottom: solid 1px #e1e1e1
+          &:last-child
+            border: 0
+        &:hover
+          background: #353535
+        &:last-child
+          margin-right: 0
+        &:first-child > a
+          width: 161px
+        &:nth-child(2) > a
+          width: 96px
+        &:nth-child(3) > a
+          width: 123px
+        &:nth-child(4) > a
+          width: 116px
+        &:nth-child(5) > a
+          width: 95px
+        &:nth-child(6) > a
+          width: 158px
+        &:last-child > a
+          width: 135px
+        &.pc-link:hover > .pc-dropdown
+          display: block
+        .nav-link
+          display: block
+          position: relative
+          text-decoration: none
+          font: bold 14px/16px $arial-mt
+          letter-spacing: 0.5px
+          color: #fff
+          @media (max-width: 1199px)
+            color: black
+          &:before
+            content: "\f107"
+            font-size: 15px
+            position: absolute
+            font-family: FontAwesome
+            font-style: normal
+            font-weight: normal
+            text-decoration: inherit
+            left: -13px
+            bottom: 18px
+        .pc-dropdown
+          display: none
+          position: absolute
+          left: 0
+          top: 80px
+          z-index: 1000
+          width: 100%
+          height: 393px
+          background: #edeef0
+          box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1)
+          @media (max-width: 1199px)
+            width: auto
+          .pc-dropdown-menu
+            float: left
+            padding: 0
+            margin: 0
+            list-style: none
+            width: 270px
+            li
+              display: block
+              border-bottom: solid 1px #e1e1e1
+              position: relative
+              &:last-child
+                border: none
+              &:after
+                content: "\f105"
+                position: absolute
+                font-family: FontAwesome
+                font-size: 23px
+                font-style: normal
+                font-weight: normal
+                text-decoration: inherit
+                top: 14px
+                right: 16px
+                color: #dadada
+              &:hover:after
+                color: white
+              a
+                display: block
+                color: #010101
+                text-decoration: none
+                font: bold 14px/1 $arial-mt
+                padding: 20.6px 17px
+                &:hover
+                  background: #dc2a2b
+                  color: #fff
+          .pc-sub-menu
+            display: none
+            &.active
+              display: block
+            @media (max-width: 1199px)
+              background: #edeef0
+          .tablets-sub-menu
+            display: none
+            &.active
+              display: block
+
+.carrusel
+  background: #7f8c8c
+  margin-bottom: 40px
+  .slider
+    margin: 0 auto
+    padding: 0
+    background: #7f8c8c
+    .slide-item
+      position: relative
+      img
+        @media (max-width: 1330px) 
+          height: auto
+      .super-price-big
+        position: absolute
+        top: 60px
+        left: 299px
+        width: 186px
+        height: 59px
+        background: url('../img/super-price-big.svg') no-repeat
+        text-align: center
+        @media (max-width: 1330px)
+          background: none
+          top: 200px
+          left: 835px
+        @media (max-width: 1320px)
+          display: none
+        span
+          color: #e73435
+          font: normal 21px/50px $arial-mt
+          cursor: default
+      .go-to-card
+        position: absolute
+        width: 261px
+        top: 118px
+        right: 454px
+        text-align: center
+        @media (max-width: 1550px)
+          right: 340px
+        @media (max-width: 1330px) 
+          top: 50px
+          right: 270px
+        @media (max-width: 1320px)
+          display: none
+        .price-flag
+          display: block
+          margin: 0 auto
+          width: 226px
+          height: 68px
+          background: url('../img/price-flag.svg') no-repeat
+          span
+            font: normal 28px/62px $arial-mt
+            color: #e73435
+            cursor: default
+        p
+          text-align: center
+          font: normal 20px/1.25 $arial-mt
+          color: #4b4b4b
+          cursor: default
+          margin: 12px 0 92px 0
+        a
+          font: normal 21px/1 $arial-mt
+          color: #fff
+          background: #e73435
+          text-decoration: none
+          padding: 11px 24px
+          &:hover
+            opacity: .9
+          @media (max-width: 1330px)
+            display: none 
+
+.products
+  margin-bottom: 53px
+  .sale-controls
+    margin-bottom: 16px
+    .products-tabs
+      float: left
+    .sale-slider-btn
+      float: right
+      font-size: 0
+      a
+        margin-right: 10px
+        &:last-child
+          margin-right: 0
+  .products-tabs-item
+    display: none
+    &.active
+      display: block  
+    &.sale, &.news
+      font-size: 0
+      border: solid 1px #e1e1e1
+      margin-bottom: 24px
+      .slick-dots
+        bottom: 342px
+        left: 345px
+        max-width: 700px
+        text-align: right
+        @media (max-width: 1199px)
+          left: 744px
+          max-width: 100px
+        @media (max-width: 991px)
+          left: 525px
+        @media (max-width: 767px)
+          display: none!important
+        li
+          margin: 0
+          &.slick-active
+            button
+              &:before
+                color: red
+          button
+            &:before
+              font-size: 11px
+              color: #e4e4e4
+              opacity: 1
+  .viewed-controls
+    margin: 33px 0 15px 0
+    .viewed-title
+      float: left
+      margin: 0
+      color: #333
+      font: normal 24px/50px $arial-mt
+    .viewed-slider-btn
+      float: right
+      font-size: 0
+      a
+        margin-right: 10px
+        &:last-child
+          margin-right: 0
+  .viewed-products
+    font-size: 0
+    border: solid 1px #e1e1e1
+    margin-bottom: 74px
+    .slick-dots
+      bottom: 342px
+      left: 345px
+      max-width: 700px
+      text-align: right
+      @media (max-width: 1199px)
+        left: 744px
+        max-width: 100px
+      @media (max-width: 991px)
+        left: 525px
+      li
+        margin: 0
+        &.slick-active
+          button
+            &:before
+              color: red
+        button
+          &:before
+            font-size: 11px
+            color: #e4e4e4
+            opacity: 1
+  .popular-controls
+    margin-bottom: 15px
+    .popular-title
+      float: left
+      margin: 0
+      color: #333
+      font: normal 24px/50px $arial-mt
+    .popular-slider-btn
+      float: right
+      font-size: 0
+      a
+        margin-right: 10px
+        &:last-child
+          margin-right: 0
+  .popular
+    font-size: 0
+    border: solid 1px #e1e1e1
+    .slick-dots
+      bottom: 342px
+      left: 345px
+      max-width: 700px
+      text-align: right
+      @media (max-width: 1199px)
+        left: 744px
+        max-width: 100px
+      @media (max-width: 991px)
+        left: 525px
+      li
+        margin: 0
+        &.slick-active
+          button
+            &:before
+              color: red
+        button
+          &:before
+            font-size: 11px
+            color: #e4e4e4
+            opacity: 1
+
+
+.articles-wrap
+  margin-bottom: 40px
+  .articles-controls
+    margin-bottom: 17px
+    position: relative
+    .articles-tabs
+      float: left
+      li
+        display: inline-block
+    .all-reviews
+      position: absolute
+      top: 19px
+      right: 235px
+      z-index: 1
+      font: normal 14px/1 $arial-mt
+      color: #333333
+      text-decoration: none
+      &:hover
+        opacity: .75
+      @media (max-width: 991px)
+        right: 179px
+      @media (max-width: 767px)
+        right: 130px
+      @media (max-width: 554px)
+        display: none
+    .articles-slider-btn
+      float: right
+      font-size: 0
+      a
+        margin-right: 10px
+        &:last-child
+          margin-right: 0
+  .articles-tabs-list
+    .articles-tabs-item
+      display: none
+      &.active
+        display: block
+      &.reviews, &.articles
+        .slick-dots
+          bottom: 277px
+          left: 345px
+          max-width: 700px
+          text-align: right
+          @media (max-width: 1199px)
+            left: 744px
+            bottom: 296px
+            max-width: 100px
+          @media (max-width: 991px)
+            left: 525px
+          li
+            margin: 0
+            &.slick-active
+              button
+                &:before
+                  color: red
+            button
+              &:before
+                font-size: 11px
+                color: #e4e4e4
+                opacity: 1
+
+
+.shop-history
+  color: #c2c2c2
+  margin-bottom: 40px
+  @media (max-width: 554px)
+    display: none
+  h5
+    font: normal 14px/1 $arial-mt
+    margin: 0 0 6px 0
+  p
+    font: normal 11px/1.36 $arial-mt
+    margin: 0 0 2px 0
+    word-wrap: break-word
+    &:nth-child(3)
+      margin-bottom: 0
+  a
+    display: block
+    margin-top: 13px
+    color: #cdcdcd
+    font: normal 13px/1 $arial-mt
+    text-align: right
+    &:hover
+      color: #4a4a4a
+
+footer
+  background-color: #edf1f5
+  padding-bottom: 35px
+  .footer-wrap
+    padding-top: 52px
+    .copyright
+      float: left
+      margin-right: 46px
+      font: normal 13px/1 $arial-mt
+      @media (max-width: 991px)
+        display: none
+      h5
+        margin: 0 0 7px 0
+        color: #4a4a4a
+        font: normal 13px/21px $arial-mt
+      p
+        margin: 0 0 6px 0
+        color: #333
+        line-height: 1.62
+      span
+        color: #b5b5b5
+        a
+          text-decoration: none
+          color: #b5b5b5
+          &:hover
+            color: #4a4a4a
+    .phones
+      float: left
+      margin-right: 134px
+      @media (max-width: 1199px)
+        display: none
+      a
+        color: #373737
+        font: normal 19px/1 $arial-mt
+        text-decoration: none
+        display: block
+        margin-bottom: 27px
+        &:last-child
+          margin-bottom: 0
+        &:hover
+          opacity: .75
+        &.mob-number:before
+          content: ' '
+          display: inline-block
+          vertical-align: bottom
+          height: 18px
+          width: 16px
+          background: url('../img/star-color-icon.png') no-repeat
+          padding-right: 6px
+        &.office-number:before
+          content: "\f095"
+          font-size: 17px
+          color: #50aaf5
+          font-family: FontAwesome
+          font-style: normal
+          font-weight: normal
+          padding-right: 8px
+        &.skype:before
+          content: "\f17e"
+          color: #50aaf5
+          font-family: FontAwesome
+          font-style: normal
+          font-weight: normal
+          padding-right: 7px
+    .links
+      float: left
+      width: 328px
+      @media (max-width: 554px)
+        float: none
+        margin: 0 auto
+      @media (max-width: 480px)
+        width: 288px
+      ul
+        float: left
+        padding: 0
+        margin: 0
+        list-style: none
+        margin-right: 81px
+        &:last-child
+          margin-right: 0
+        @media (max-width: 480px)
+          margin-right: 41px
+        li
+          margin-bottom: 24px
+          a
+            text-decoration: none
+            color: #5486b3
+            font: normal 14px/1 $arial-mt
+            &:hover
+              opacity: .75
+    .social
+      float: right
+      // width: 171px
+      width: 163px
+      @media (max-width: 554px)
+        float: none
+        width: 100%
+        text-align: center
+      p
+        margin: 0 0 12px 0
+        color: #373737
+        font: normal 14px/21px $arial-mt
+      .social-item
+        display: inline-block
+        text-decoration: none
+        margin: 0 5px 10px 0
+        &:last-child
+          margin-right: 0
+        &:hover
+          opacity: .75
+
+
+
+
+
+
+
+
+
